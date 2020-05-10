@@ -113,7 +113,10 @@ var pay = function(stripe, fpxBank, clientSecret) {
 
   // Initiate the payment.
   stripe
-    .handleFpxPayment(clientSecret, fpxBank, {
+    .confirmFpxPayment(clientSecret, {
+      payment_method: {
+        fpx: fpxBank
+      },
       return_url: `${window.location.href}`
     })
     .then(function(result) {
@@ -126,6 +129,7 @@ var pay = function(stripe, fpxBank, clientSecret) {
       }
     });
 };
+
 
 /* ------- Post-payment helpers ------- */
 
