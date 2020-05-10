@@ -95,6 +95,7 @@ h4 {
   background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
+  text-align: center;
   align-items: center;
   justify-content: center;
 }
