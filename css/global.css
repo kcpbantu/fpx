@@ -56,7 +56,7 @@ h4 {
   display: flex;
   flex-direction: row;
   width: 100%;
-  max-width: 650x;
+  max-width: 1024px;
   padding: 48px;
   align-content: center;
   justify-content: center;
@@ -92,10 +92,9 @@ h4 {
 .sr-header__logo {
   background-image: var(--logo-image);
   height: 58px;
-  background-size: auto;
+  background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
-  text-align: center;
   align-items: center;
   justify-content: center;
 }
@@ -345,21 +344,14 @@ pre {
 @media (max-width: 1024px) {
   .sr-root {
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 48px 20px;
     min-width: 320px;
     align-content: center;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
   }
 
   .sr-header__logo {
     background-position: center;
-    align-content: center;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
   }
 
   .sr-payment-summary {
