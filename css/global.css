@@ -345,10 +345,13 @@ pre {
 @media (max-width: 1024px) {
   .sr-root {
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     padding: 48px 20px;
     min-width: 320px;
     align-content: center;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
   }
 
   .sr-header__logo {
