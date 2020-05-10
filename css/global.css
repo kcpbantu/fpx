@@ -93,7 +93,7 @@ h4 {
   background-image: var(--logo-image);
   height: 58px;
   background-size: contain;
-  background-repeat: no-repeat;
+  background-repeat: space;
   width: 100%;
   text-align: center;
   align-items: center;
