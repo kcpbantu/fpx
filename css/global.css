@@ -353,6 +353,10 @@ pre {
 
   .sr-header__logo {
     background-position: center;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
   }
 
   .sr-payment-summary {
