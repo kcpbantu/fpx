@@ -69,7 +69,7 @@ h4 {
   margin-bottom: 32px;
 }
 .sr-header a {
-  display: block;
+  display: inline;
 }
 .sr-payment-summary {
   margin-bottom: 20px;
