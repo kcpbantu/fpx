@@ -92,7 +92,7 @@ h4 {
 .sr-header__logo {
   background-image: var(--logo-image);
   height: 87px;
-  background-size: contain;
+  background-size: auto;
   background-repeat: no-repeat;
   width: 300px;
   align-items: center;
