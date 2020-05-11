@@ -16,7 +16,7 @@
   --body-font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   --radius: 6px;
   --logo-image: url("https://i.imgur.com/Vpz2zL5.png");
-  --form-width: 650px;
+  --form-width: 1024px;
 }
 
 /* Base */
@@ -87,7 +87,7 @@ h4 {
   width: var(--form-width);
 }
 .sr-content {
-  padding-left: 48px;
+  padding-left: 38px;
 }
 .sr-header__logo {
   background-image: var(--logo-image);
