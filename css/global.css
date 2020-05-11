@@ -91,10 +91,10 @@ h4 {
 }
 .sr-header__logo {
   background-image: var(--logo-image);
-  height: 58px;
+  height: 87px;
   background-size: contain;
   background-repeat: no-repeat;
-  width: 100%;
+  width: 300px;
   align-items: center;
   justify-content: center;
 }
