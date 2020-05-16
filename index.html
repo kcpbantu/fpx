@@ -148,8 +148,8 @@
           stripe
          
             .redirectToCheckout({
-payment_method_types: ['card', 'fpx'],
-       lineItems: [{price: 'sku_HBMov5OKOnuGMe', quantity: 1}],
+      payment_method_types: ['card', 'fpx'],
+      items: items,
       mode: 'payment',
          
               successUrl:
