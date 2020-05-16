@@ -26,6 +26,21 @@
           <h1>One-time Donation</h1>
           <button data-sku-id="sku_HEw57NuNJlwUZB" data-paymentmethod="fpx">بِسۡمِ ٱللهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِيمِ</button>
           <button data-sku-id="sku_HBMov5OKOnuGMe" data-paymentmethod="fpx">Donate RM10 once</button>
+          # Set your secret key. Remember to switch to your live secret key in production!
+# See your keys here: https://dashboard.stripe.com/account/apikeys
+stripe.api_key = 'sk_test_PLiOcIjAm21cud2PbXj9dK9m00PlmPubfg'
+
+session = stripe.checkout.Session.create(
+  submit_type='donate',
+  payment_method_types=['card', 'fpx'],
+  line_items=[{
+    'price': '{prod_HBMoDJMA8wfcQj}',
+    'quantity': 1,
+  }],
+  mode='payment',
+  success_url='https://fpx.kcpbantu.org/success?session_id={CHECKOUT_SESSION_ID}',',
+  cancel_url='https://fpx.kcpbantu.org/canceled',
+)
           <button data-sku-id="sku_HC9oX6Mm64VRk6" data-paymentmethod="fpx">Donate RM20 once</button>
           <button data-sku-id="sku_HBMofgdLumOY1E" data-paymentmethod="fpx">Donate RM50 once</button>
           <button data-sku-id="sku_HBMo1Gcji6cJ7X" data-paymentmethod="fpx">Donate RM100 once</button>
