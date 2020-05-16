@@ -54,7 +54,20 @@
     </div>
 
     <script>
-      
+
+stripe.api_key = 'pk_live_y0w739w1dR6yZv3P8dfhFBCh00lEbc72UX'
+
+session = stripe.checkout.Session.create(
+  submit_type='donate',
+  payment_method_types=['card', 'fpx'],
+  line_items=[{
+    'price': '{prod_HBMoDJMA8wfcQj}',
+    'quantity': 1,
+  }],
+  mode='payment',
+  success_url='https://fpx.kcpbantu.org/success?session_id={CHECKOUT_SESSION_ID}',',
+  cancel_url='https://fpx.kcpbantu.org/canceled',
+)   
 
       
       // Replace with your own publishable key: https://dashboard.stripe.com/test/apikeys
