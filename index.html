@@ -144,17 +144,7 @@
 
           // Make the call to Stripe.js to redirect to the checkout page
           // with the sku or plan ID.
-          session = stripe.checkout.Session.create(
-  payment_method_types=['card', 'fpx'],
-  line_items=[{
-    'price': '{sku_HBMov5OKOnuGMe}',
-    'quantity': 1,
-    'currency': 'myr',
-  }],
-  mode='payment',
-  success_url='https://fpx.kcpbantu.org/success.html?session_id={CHECKOUT_SESSION_ID}',
-  cancel_url='https://fpx.kcpbantu.org/canceled.html',
-)
+          
           
           stripe
          
