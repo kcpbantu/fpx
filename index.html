@@ -148,13 +148,9 @@
           stripe
          
             .redirectToCheckout({
-             payment_method_types=['card', 'fpx'],
-  line_items=[{
-    'price': '{PRICE_ID}',
-    'quantity': 1,
-    'currency': 'myr',
-  }],
-  mode='payment',
+payment_method_types: ['card', 'fpx'],
+       lineItems: [{price: 'sku_HBMov5OKOnuGMe', quantity: 1}],
+      mode: 'payment',
          
               successUrl:
                 DOMAIN + "success.html?session_id={CHECKOUT_SESSION_ID}",
