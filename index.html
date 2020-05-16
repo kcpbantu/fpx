@@ -145,6 +145,14 @@
           // Make the call to Stripe.js to redirect to the checkout page
           // with the sku or plan ID.
           stripe
+          
+           payment_method_types=['card', 'fpx'],
+  line_items=[{
+    'price': '{PRICE_ID}',
+    'quantity': 1,
+    'currency': 'myr',
+  }],
+  mode='payment',
             .redirectToCheckout({
               items: items,
               successUrl:
