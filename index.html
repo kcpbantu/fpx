@@ -55,33 +55,6 @@
 
     <script>
 
-      (function() {
-  var stripe = Stripe('pk_live_y0w739w1dR6yZv3P8dfhFBCh00lEbc72UX');
-
-  var checkoutButton = document.getElementById('checkout-button-sku_HBMov5OKOnuGMe');
-  checkoutButton.addEventListener('click', function () {
-    // When the customer clicks on the button, redirect
-    // them to Checkout.
-    stripe.redirectToCheckout({
-        submit_type='donate',
-  payment_method_types=['card', 'fpx'],
-      lineItems: [{price: 'sku_HBMov5OKOnuGMe', quantity: 1}],
-      mode: 'payment',
-      // Do not rely on the redirect to the successUrl for fulfilling
-      // purchases, customers may not always reach the success_url after
-      // a successful payment.
-      // Instead use one of the strategies described in
-      // https://stripe.com/docs/payments/checkout/fulfillment
-      successUrl: 'https://www.kcpbantu.org/success',
-      cancelUrl: 'https://www.kcpbantu.org/canceled',
-    })
-    
-  });
-})();
-
-
-
-
       
       // Replace with your own publishable key: https://dashboard.stripe.com/test/apikeys
       var PUBLISHABLE_KEY = "pk_live_y0w739w1dR6yZv3P8dfhFBCh00lEbc72UX";
@@ -175,7 +148,9 @@
           stripe
          
             .redirectToCheckout({
+             payment_method_types=['card', 'fpx'],
               items: items,
+             mode: 'payment',
               successUrl:
                 DOMAIN + "success.html?session_id={CHECKOUT_SESSION_ID}",
               cancelUrl:
